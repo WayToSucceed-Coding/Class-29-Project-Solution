@@ -61,13 +61,9 @@ while running:
         if event.type==pygame.KEYDOWN and event.key==pygame.K_RETURN and game_state=='start':
             game_state='play'
 
-        if event.type==pygame.MOUSEMOTION and game_state=='play':
-            x,y=event.pos
-            if x >= 0 and x <= WIDTH - 100:
-                spaceship_x = x
-    
     if game_state=='start':
         screen.blit(welcome_bg,(0,0))
+        
     elif game_state=='play':
         screen.blit(background, (0, 0))  # Draw background
         screen.blit(spaceship, (spaceship_x, spaceship_y))  # Draw spaceship 
